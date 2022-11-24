@@ -1,6 +1,16 @@
 import unittest
-from test_CSVPrinter import CSVFileWriterPrinter
+#from test_CSVPrinter import CSVFileWriterPrinter
+import csv
 
+class CSVFileWriterPrinter:
+    def __init__(self, file_name):
+        self.file_name = file_name
+    def read(self):
+        with open(self.file_name) as f:
+            reader = csv.reader(f)
+            lines = [row for row in reader]
+        return lines
+    
 class TestCSVPrinter(unittest.TestCase):
     def test_read1(self):
         printer = CSVFileWriterPrinter("sample.csv")
