@@ -9,5 +9,6 @@ jobs:
       run: 
         cd $GITHUB_WORKSPACE
     - name: Run Tests
-    run: python -m unittest tests/*.py
+    run: python -m unittest tests/test_CSVPrinter.py
+      run: python -m unittest tests/test_add.py
 
