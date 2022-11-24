@@ -1,15 +1,7 @@
 import unittest
-#from test_CSVPrinter import CSVFileWriterPrinter
-import csv
 
-class CSVFileWriterPrinter:
-    def __init__(self, file_name):
-        self.file_name = file_name
-    def read(self):
-        with open(self.file_name) as f:
-            reader = csv.reader(f)
-            lines = [row for row in reader]
-        return lines
+from speciallecture.CSVFileWriterPrinter import CSVFileWriterPrinter
+
     
 class TestCSVPrinter(unittest.TestCase):
     def test_read1(self):
@@ -36,8 +28,3 @@ class TestCSVPrinter(unittest.TestCase):
     #         printer.read()
     #     raise FileNotFoundError(e)  ## 例外を上げる処理（メソッド）をここに書く
 
-
-test = TestCSVPrinter()
-test.test_read1()
-test.test_read2()
-#test.test_read3()
