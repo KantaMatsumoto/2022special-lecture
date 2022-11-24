@@ -40,4 +40,4 @@ class TestCSVPrinter(unittest.TestCase):
 test = TestCSVPrinter()
 test.test_read1()
 test.test_read2()
-test.test_read3()
+#test.test_read3()
